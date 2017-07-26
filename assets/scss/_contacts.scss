@@ -1,0 +1,34 @@
+.contacts{
+
+  .contacts-title{
+    text-align: left;
+    position: relative;
+
+    &:after{
+      content: '';
+      position: absolute;
+      height: 1px;
+      width: 40%;
+      bottom: 0;
+      left: 15px;
+      background: $main-color1;
+    }
+  }
+
+  .contacts-text{
+    font-size: 20px;
+  }
+
+  .contacts-phone{
+    list-style: square inside;
+    font-size: 20px;
+
+    li{
+      margin-bottom: 5px;
+
+      a{
+        color: $main-color1;
+      }
+    }
+  }
+}

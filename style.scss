@@ -1,0 +1,41 @@
+/*
+Theme Name: Simple Theme
+Theme URI: https:
+Author: Alexey Abrosimov
+Author URI:
+Description: Mobile, tablet, desktop.
+Version: 1.0
+License:
+License URI:
+Text Domain:
+Tags:
+*/
+
+/**
+Common styles
+ */
+@import "assets/scss/bootstrap/bootstrap";
+@import "assets/scss/font-awesome/font-awesome";
+@import "assets/scss/vars";
+@import "assets/scss/fonts";
+@import "assets/scss/common";
+
+/**
+Plugin styles
+ */
+@import "assets/scss/slick";
+
+
+/**
+Structure styles
+ */
+@import "assets/scss/header";
+@import "assets/scss/footer";
+@import "assets/scss/posts";
+@import "assets/scss/reviews";
+@import "assets/scss/workscheme";
+@import "assets/scss/objections";
+@import "assets/scss/orders";
+@import "assets/scss/discount";
+@import "assets/scss/blog-main-page";
+@import "assets/scss/contacts";

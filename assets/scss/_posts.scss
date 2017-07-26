@@ -1,0 +1,176 @@
+@mixin nav-link-style()
+{
+  display: inline-flex;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 15px;
+
+  .nav-buttons{
+    color: white;
+  }
+
+  @include media-breakpoint-down(sm){
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.post-item{
+  position: relative;
+  display: inline-block;
+  float: left;
+  overflow: hidden;
+  height: 310px;
+  width: 50%;
+
+  @include media-breakpoint-down(sm){
+    width: 100%;
+    height: 150px;
+  }
+
+  &:hover{
+
+    .post-title{
+      font-size: 45px;
+      bottom: 60%;
+    }
+    .post-text{
+      bottom: 0;
+    }
+
+    .gradient{
+      opacity: 1;
+    }
+  }
+
+  .post-title{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 10px;
+    left: 0;
+    z-index: 1;
+
+    -webkit-transition: all .45s;
+    -moz-transition: all .45s;
+    -ms-transition: all .45s;
+    -o-transition: all .45s;
+    transition: all .45s;
+
+    &.reviews{
+      font-family: 'Conv_Mariupol-Regular';
+      color: white;
+      text-shadow: 2px 2px  5px black;
+      cursor: pointer;
+    }
+
+    a{
+      font-family: 'Conv_Mariupol-Regular';
+      color: white;
+      text-shadow: 2px 2px  5px black;
+
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+
+  .post-text{
+    position: absolute;
+    background: rgba(255, 255, 255, 0.8);
+    bottom: -150%;
+    padding: 1rem;
+
+    -webkit-transition: all .45s;
+    -moz-transition: all .45s;
+    -ms-transition: all .45s;
+    -o-transition: all .45s;
+    transition: all .45s;
+
+    @include media-breakpoint-down(sm){
+      display: none;
+    }
+
+    p{
+      margin: 0;
+    }
+
+    .more-link{
+      font-family:'Oswald SemiBold';
+      color: black;
+    }
+  }
+
+  .gradient{
+    opacity: 0;
+  }
+}
+
+.post-single{
+  margin-top: 3rem;
+
+  .unite-gallery{
+    @include media-breakpoint-down(sm){
+      overflow-x: hidden;
+    }
+  }
+
+  .ug-thumb-wrapper{
+    border-color: $main-color1 !important;
+    //border: 2px solid $main-color1 !important;
+    -webkit-box-shadow: 0 0 10px transparentize(black, .7) !important;
+    -moz-box-shadow: 0 0 10px transparentize(black, .7) !important;
+    box-shadow: 0 0 10px transparentize(black, .7) !important;
+    @include media-breakpoint-down(sm){
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+    }
+  }
+  .ug-thumb-overlay{
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+}
+
+.post-navigation-container {
+  width: 100%;
+  background: $main-color1-t;
+  text-align: center;
+  border: 1px solid white;
+
+  -webkit-box-shadow: 0 0 10px transparentize(black, .3);
+  -moz-box-shadow: 0 0 10px transparentize(black, .3);
+  box-shadow: 0 0 10px transparentize(black, .3);
+
+  .post-navigation {
+    width: 100%;
+
+    .screen-reader-text {
+      display: none;
+    }
+
+    .nav-links {
+
+      .nav-previous {
+        float: left;
+        background: $main-color1;
+
+        @include nav-link-style;
+      }
+      .nav-next {
+        float: right;
+        background: $main-color2;
+
+        @include nav-link-style;
+      }
+    }
+  }
+
+  .back-button {
+    color: $main-color1;
+    @include nav-link-style;
+  }
+}

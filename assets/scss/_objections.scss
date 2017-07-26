@@ -1,0 +1,44 @@
+$objectionsCount: 4;
+
+.objections{
+
+  .obj{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+
+    background-position: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+
+    -webkit-box-shadow:  -7px 0px 15px -8px black;
+    -moz-box-shadow:  -7px 0px 15px -8px black;
+    box-shadow:  -7px 0px 15px -8px black;
+
+    color: white;
+
+    @for $i from 1 to $objectionsCount + 1
+    {
+      &.obj#{$i}
+      {
+        @if $i == 1{
+          background-color: $main-color1;
+        }
+        @else
+        {
+          background-color: lighten($main-color1, $i * 5%);
+        }
+
+        //background-image: url("assets/images/objections-images/obj#{$i}.jpg");
+      }
+    }
+
+    .obj-title{
+      margin:1rem 0 0;
+    }
+
+    img{
+      padding: 1rem;
+    }
+  }
+}

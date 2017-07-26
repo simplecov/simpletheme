@@ -1,0 +1,218 @@
+.header-image{}
+
+.header-content{
+  height: 6rem;
+  position: absolute;
+  width: 100%;
+  padding: 1rem;
+  background: rgba(0,0,0,0.3);
+
+  @include media-breakpoint-down(sm){
+    position: relative;
+    height: auto;
+    background: $main-color1;
+  }
+
+  .mobile-toggler{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin: 1rem 0;
+    cursor: pointer;
+    font-size: 25px;
+  }
+
+  .custom-logo-link{
+
+    img{
+      width: 100px;
+      height: auto;
+    }
+  }
+}
+
+.navigation-top{
+  bottom: 5px;
+  position: absolute;
+  right: 0;
+  padding: 0 1rem;
+  z-index: 100;
+  width: 100%;
+
+  @include media-breakpoint-down(sm){
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    background: white;
+    padding: 0;
+  }
+
+  &.opened{
+    height: auto;
+
+    .menu{
+      display: block;
+      max-height: 1000px;
+      padding: 1rem 0;
+    }
+  }
+
+  @include media-breakpoint-up(lg){
+    &.to-top{
+      position: fixed;
+      height: 40px;
+      top: 40px;
+      right: 15px;
+      background: transparentize(white, 0.3);
+      padding-left: 50px;
+
+      -webkit-box-shadow:  -5px 7px 10px -5px transparentize(black, .7);
+      -moz-box-shadow:  -5px 7px 10px -5px transparentize(black, .7);
+      box-shadow:  -5px 7px 10px -5px transparentize(black, .7);
+
+      -webkit-transition: all .4s;
+      -moz-transition: all .4s;
+      -ms-transition: all .4s;
+      -o-transition: all .4s;
+      transition: all .4s;
+
+      $title-inner-height: 4.5rem;
+      @include media-breakpoint-down(sm){
+        $title-inner-height: 3rem;
+      }
+      &:before, &:after{
+        content: " ";
+        position: absolute;
+        top: 0;
+        width: $title-inner-height / 2;
+        height: 100%;
+      }
+
+      &:before{
+        background-color: $main-color2;
+        left: 0;
+        opacity: .45;
+      }
+
+      &:after{
+        background-color: $main-color1;
+        left: $title-inner-height / 2;
+        opacity: .3;
+      }
+    }
+  }
+
+  ul{
+    margin: 0;
+    text-align: center;
+    padding: 0;
+    border-bottom: 2px solid;
+
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+
+    @include media-breakpoint-down(sm){
+      overflow: hidden;
+      background: $main-color2-t;
+      max-height: 0;
+    }
+
+    li{
+      list-style: none;
+      display: inline-block;
+
+      @include media-breakpoint-up(md){
+        margin-right: 1rem;
+
+        &:last-child{
+          margin: 0;
+        }
+      }
+
+      @include media-breakpoint-down(sm){
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+
+        &:first-child{
+          margin: 0;
+        }
+      }
+
+      &.current-menu-item{
+        a{
+          color: $text-color;
+          padding: 5px 15px 5px 25px;
+
+          $after-element-size: 15px;
+          &:after, &:before{
+            content: '';
+            position: absolute;
+            width: $after-element-size;
+            height: $after-element-size;
+            top: 9px;
+
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+          }
+          &:after{
+            background: $main-color2;
+            left: 0;
+          }
+          &:before{
+            background: $main-color1;
+            left: 5px;
+          }
+
+          @include media-breakpoint-down(sm){
+            width: 100%;
+            display: inline-block;
+          }
+        }
+      }
+
+      a{
+        position: relative;
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        -ms-transition: all .3s;
+        -o-transition: all .3s;
+        transition: all .3s;
+        color: $text-color;
+        font-size: 25px;
+
+        @include media-breakpoint-up(md){
+          padding: 5px 10px;
+        }
+
+        &:hover{
+          text-decoration: none;
+          color: $text-color;
+        }
+
+        @include media-breakpoint-down(sm){
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+.header-image{
+  height: 350px;
+  background: url(assets/images/1.jpg);
+  background-position: -25px -50px;
+  width:100%;
+  background-size: calc(100% + 50px);
+
+  @include media-breakpoint-down(sm){
+    height: 150px;
+    background-position: 0 0;
+  }
+}

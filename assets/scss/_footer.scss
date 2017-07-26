@@ -1,0 +1,9 @@
+footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: $footer-height;
+  padding: 2rem;
+  background: $main-color1;
+  z-index: 0;
+}

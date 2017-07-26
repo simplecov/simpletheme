@@ -1,0 +1,58 @@
+$ordersCount: 3;
+
+.orders{
+  position: relative;
+
+  .order{
+    position: relative;
+    color: white;
+    cursor: pointer;
+
+    -webkit-box-shadow:  -7px 0px 15px -8px black;
+    -moz-box-shadow:  -7px 0px 15px -8px black;
+    box-shadow:  -7px 0px 15px -8px black;
+
+
+    $new-main-blue: $main-color1;
+    @for $i from 1 to $ordersCount + 1
+    {
+      &.order#{$i}
+      {
+        @if $i == 1{
+          background-color: $new-main-blue;
+        }
+        @else
+        {
+          background-color: lighten($new-main-blue, $i * 5%);
+        }
+      }
+    }
+
+    .order-title{
+      margin: 0;
+      padding: 15px 0 10px;
+      text-align: center;
+    }
+    .order-small-text{
+      line-height: 18px;
+      font-size: 13px;
+    }
+
+    .stars{
+      width: 100%;
+      text-align: center;
+      margin-bottom: 15px;
+
+      .star{
+        display: inline-flex;
+        height: 40px;
+        margin: 0 3px;
+
+        i:before{
+          font-size: 28px;
+        }
+      }
+    }
+  }
+
+}

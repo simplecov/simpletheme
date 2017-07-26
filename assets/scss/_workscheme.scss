@@ -1,0 +1,153 @@
+$stepCount: 8;
+//$steps:
+
+  //@while($stepCount > 0)
+//{
+//  .step2{
+//    background-color: black;
+//  }
+//}
+
+
+$main-step-size: 250px;
+$common-step-size: 200px;
+
+.workscheme{
+
+  .steps{
+    text-align: center;
+    margin: 0 -1px;
+
+    .step{
+      height: 250px;
+      position: relative;
+      display: inline-flex;
+      float: left;
+      padding: .5rem;
+      border: 1px solid white;
+
+      background-position: 100% 0;
+      -webkit-background-size: cover;
+      background-size: cover;
+
+      width: 25%;
+      @include media-breakpoint-down(lg){
+        width: 50%;
+      }
+      @include media-breakpoint-down(sm){
+        width: 100%;
+      }
+
+      $secondary-step-size: $main-step-size * 0.8;
+      .step-content{
+        height: $secondary-step-size;
+        width: $secondary-step-size;
+        margin: auto;
+
+        -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.7);
+        -moz-box-shadow: 0 0 50px rgba(0, 0, 0, 0.7);
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.7);
+      }
+
+
+      @for $i from 0 to $stepCount + 1
+      {
+        &.step#{$i}{
+          //$image: "assets/images/step-images/#{$i}.jpg";
+          .background{
+            background-image: url("assets/images/workscheme/step#{$i}.jpg");
+          }
+          .step-content{
+
+            .background{
+              background-image: url("assets/images/workscheme/step#{$i}.jpg");
+            }
+          }
+        }
+      }
+
+      &.step1{
+        .step-content{
+          .step-text{
+            text-align: center;
+          }
+        }
+      }
+
+
+      .step-content{
+        position: relative;
+        display: inline-flex;
+        padding: .5rem;
+        overflow: hidden;
+
+        font-size: 20px;
+        color: white;
+        text-shadow: 2px 2px 0 black;
+
+        background-position: 100% 0;
+        -webkit-background-size: cover;
+        background-size: cover;
+
+        border: 3px solid white;
+
+        .background{
+          -ms-filter: blur(2px);
+          -webkit-filter: blur(2px);
+          filter: blur(2px);
+
+          -webkit-transform: scale(1.1);
+          -moz-transform: scale(1.1);
+          -ms-transform: scale(1.1);
+          -o-transform: scale(1.1);
+          transform: scale(1.1);
+        }
+
+        .step-text{
+          margin: auto;
+          text-align: right;
+
+          p, button, a, small{
+            color: white;
+            position: relative;
+            z-index: 1;
+            white-space: inherit;
+            margin: 0;
+          }
+
+          p{
+            line-height: 22px;
+          }
+
+          small{
+            line-height: 20px;
+          }
+
+          .number{
+            position: absolute;
+            font-size: 30px;
+            line-height: 30px;
+            padding: 5px 5px 5px 3px;
+            z-index: 1;
+            bottom: 0;
+            left: 0;
+            background: white;
+            color: $main-color1;
+            text-shadow: none;
+          }
+        }
+
+      }
+    }
+  }
+}
+//
+//.outer {
+//  position: relative;
+//}
+//
+//.inner {
+//  position: absolute;
+//  top: 50%;
+//  transform: translateY(-50%);
+//}

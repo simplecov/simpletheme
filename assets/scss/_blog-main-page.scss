@@ -1,0 +1,54 @@
+.blog-main-page{
+
+  $blog-plate-font-size: 40px;
+  $blog-plate-height: 250px;
+  @include media-breakpoint-down(sm){
+    $blog-plate-height: auto;
+  }
+
+  .blog-content{
+    position: relative;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    .text-container{
+      height: $blog-plate-height;
+      display: flex;
+
+      .blog-text{
+        text-align: right;
+        color: white;
+        z-index: 1;
+        font-size: $blog-plate-font-size;
+        font-family: 'Conv_Mariupol-Bold';
+        margin: auto;
+        display: inline-flex;
+        padding: 0 2rem;
+        text-shadow: 2px 2px 5px black;
+        
+        @include media-breakpoint-down(sm){
+          font-size: 29px;
+          padding: 2rem;
+        }
+      }
+    }
+
+    .button-container{
+      height: $blog-plate-height;
+      text-align: center;
+      position: relative;
+      display: flex;
+
+      .blog-button{
+        position: relative;
+        z-index: 1;
+        font-size: $blog-plate-font-size;
+        margin: auto;
+
+        @include media-breakpoint-down(sm){
+          margin-bottom: 2rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,75 @@
+.discount{
+
+  .discount-content{
+    position: relative;
+    background: $main-color1;
+
+    .discount-text{
+      color: white;
+      font-size: 30px;
+      text-align: center;
+      padding: 2rem;
+      margin: 0;
+
+    }
+    .discount-list{
+      border: 5px solid $main-color1;
+
+      .list-item{
+        text-align: center;
+        position: relative;
+        display: flex;
+        height: 200px;
+
+        border: 5px solid $main-color1;
+        padding: 1rem;
+        background: white;
+        -webkit-box-shadow: inset 0 0 10px -2px black;
+        -moz-box-shadow: inset 0 0 10px -2px black;
+        box-shadow: inset 0 0 10px -2px black;
+
+        @include media-breakpoint-down(sm){
+          border-bottom: 1px solid white;
+          &:last-child{
+            border-bottom: none;
+          }
+        }
+
+        .item-image{
+          max-height: 100%;
+          max-width: 100%;
+          margin: auto;
+        }
+
+        .discount-amount{
+          background: $main-color2;
+          color: white;
+          position: absolute;
+          font-size: 25px;
+          bottom: 5px;
+          right: 5px;
+          padding: 5px;
+          border: 5px solid $main-color1;
+          opacity: .5;
+
+          -webkit-box-shadow: 0 0 10px -3px black;
+          -moz-box-shadow: 0 0 10px -3px black;
+          box-shadow: 0 0 10px -3px black;
+
+          @include media-breakpoint-down(sm){
+            //right: 50%;
+          }
+        }
+      }
+    }
+
+    .button-block{
+      text-align: center;
+      padding: 2rem;
+
+      .btn{
+        font-size: 25px;
+      }
+    }
+  }
+}

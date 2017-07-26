@@ -1,0 +1,64 @@
+/**
+BG
+ */
+$main-color1: #eed23e;
+$main-color1-t: transparentize($main-color1, 0.5);
+$main-color2: #538008;
+$main-color2-t: transparentize($main-color2, 0.5);
+$text-color: #fff;
+
+//$main-color1: #eed23e; //dark
+//$main-color2: white; //light
+
+$bg: $main-color2;//#ececec;
+$bg-gray: #ececec;
+$transparent: rgba(0,0,0,0.0001);
+
+
+
+/**
+Button colors
+ */
+$btn-color: #ccc;
+$btn-bg: white;
+$btn-border: #ccc;
+
+$btn-primary-color: white;
+$btn-primary-bg: green;
+$btn-primary-border: green;
+
+/**
+Menu colors
+ */
+$menu-mobile-bg: rgba(255, 255, 255, 0.8);
+$menu-mobile-shadow: rgba(0, 0, 0, 0.5);
+
+/**
+Radndom colors
+ */
+$red: random(256)-1;
+$green: random(256)-1;
+$blue: random(256)-1;
+
+/**
+Wrapper options
+ */
+$gradient-shadow-height: 150px;
+$gradient-top-shadow-color: rgba(0,0,0, .001);
+$gradient-bottom-shadow-color: rgba(0,0,0, .4);
+
+/**
+Reviews list text gradient
+ */
+
+$reviews-gradient-height: 150px;
+$reviews-gradient-top-shadow-color: rgba(255,255,255, .001);
+$reviews-gradient-bottom-shadow-color: rgba(255,255,255, 1);
+
+//$random-alpha: rgba(#{$red}, #{$green}, #{$blue}, 0.6);
+//$random: rgba($red, $green, $blue);
+
+/**
+Footer
+ */
+$footer-height: 200px;
