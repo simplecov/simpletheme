@@ -1,7 +1,7 @@
 var $ = jQuery;
 $(document).ready(function(){
 
-    var movementStrength = 20;
+    var movementStrength = 10;
     var height = movementStrength / $(window).height();
     var width = movementStrength / $(window).width();
     $(window).mousemove(function(e){
@@ -11,6 +11,7 @@ $(document).ready(function(){
         var newvalueY = height * pageY * -1 - 50;
         $('.image-move').css("background-position", newvalueX+"px     "+newvalueY+"px");
     });
+    $('.header-image-loader').css('opacity', 0);
 
     /**
      * Menu scroll
